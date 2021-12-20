@@ -1,3 +1,3 @@
 # Finanzas
 
-https://app.powerbi.com/view?r=eyJrIjoiMDUzMDY5ZTAtYmE4Zi00MTRlLWI3NTMtNDAyOTIxOWEwOGMzIiwidCI6ImJhYjBiNjc5LWJkNWYtNGZlOC1iNTE2LWM2YjhiMzE3Yzc4MiIsImMiOjR9
+https://app.powerbi.com/view?r=eyJrIjoiMDUzMDY5ZTAtYmE4Zi00MTRlLWI3NTMtNDAyOTIxOWEwOGMzIiwidCI6ImJhYjBiNjc5LWJkNWYtNGZlOC1iNTE2LWM2YjhiMzE3Yzc4MiIsImMiOjR9&pageName=ReportSection
