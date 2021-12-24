@@ -23,41 +23,50 @@ Modifications were made to the original data using the Power Query editor to be 
 
 The modifications were: 
 
-- The original data in "Género" column of the "Tabla Empleados" sheet was replaced from English to Spanish.
-- The original data in "Departamento" column of the "Tabla Empleados" sheet was replaced from English to Spanish.
-- The original data in "Posición" column of the "Tabla Empleados" sheet was replaced from English to Spanish.
-- The column "Nombre Empleado" of the "Tabla Empleados" sheet is modified to change the order of last name and first name.
-  - The option split column by delimiter is used to separate the name in one column and the last name in another column.
-  - Once separated into two columns, both columns are selected with Ctrl.
-  - Merge Columns option is used to return the information to a single column but now with the desired order 
+- A custom column called *Tipo* was added to the "TablaGastos" table.
+- A custom column called *Tipo* was added to the "TablaIngresos" table.
+- A new table called *Finanzas* was created appending the information from the tables "TablaGastos" and "TablaIngresos".
+- In "TablaMetas" table, the unpivot columns option is used to transform the *Remuneracion* and *Online* columns into other columns, one for category and the other for quantity.
+- A custom column called *Tipo* was added to the "TablaMetas" table.
+- In "TablaPresupuesto" table, the unpivot columns option is used to transform twenty-five columns into two columns, one for category and the other for quantity.
+- A custom column called *Tipo* was added to the "TablaPresupuesto" table.
+- A new table called *Expectativas* was created appending the information from the tables "TablaPresupuesto" and "TablaMetas".
+- A prefix was added to the column called *Fecha* from table "Expectativas" to establish the data type like date. 
+- The year of the dates that appear in the *Fecha* column of the "Calendario" table is exported to a new column. 
+- The number of the month of the dates that appear in the *Fecha* column of the "Calendario" table is exported to a new column.  
+- The name of the month of the dates that appear in the *Fecha* column of the "Calendario" table is exported to a new column.
+- From the column with the name of the month of the "Calendario" table, three characters are extracted and formed a new column. 
+- In the *Fecha* column of the "Calendario" table, the data is extracted from a delimiter in a new column.
+- A blank table was created called "Cuotas%"
+- A blank table called "Categorias" was created and the data found in the excel file categories.xlsx was copied 
 
 ## Data Modeling
 
 It was required to relate common data between the files:
 
-- The data named "ID Empleado" of the "Tabla Empleados" and "Tabla sueldo" sheet were related. 
-- The data named "ID Empleado" of the "Tabla Empleados" and "Tabla Evaluación" sheet were related. 
+- The data named *Fecha* of the "Calendario" and "Expectativas" sheet were related. 
+- The data named *Fecha* of the "Calendario" and "Finanzas" sheet were related. 
+- The data named *Categoria* of the "Calendario" and "Finanzas" sheet were related. 
+- The data named *Categoria* of the "Calendario" and "Expectativas" sheet were related. 
 
 **DAX - Data Analysis Expressions**
 
-- A new measure was created using `COUNTROWS` function in "Tabla Empleados" sheet.
-- A new measure was created using `AVERAGE` function in "Tabla Sueldo" sheet.
-- A new measure was created using `AVERAGE` function in "Tabla Evaluación" sheet.
-- A new column was created using `INT`, `YEARFRAC` and `TODAY` functions in "Tabla Empleados" sheet 
-- A new measure was created using `AVERAGE` function in "Tabla Empleados" sheet.
-- A new column was created using the conditional `IF` in "Tabla Empleados" sheet.
-- A new column was created using the conditional `IF` in "Tabla Sueldo" sheet.
-- A new column was created using the conditional `IF` in "Tabla Evaluación" sheet.
+- A new measure was created using `SUM` function in "Finanzas" sheet.
+- Two new measure was created using `CALCULATE` function in "Finanzas" sheet.
+- A new measure was created using `SUM` function in "Expectativas" sheet.
+- Two new measure was created using `CALCULATE` function in "Expectativas" sheet.
+- A subtraction operation was used to create a new measure in the "Finanzas" sheet called *Utilidad* 
+- A subtraction operation was used to create a new measure in the "Expectativas" sheet called *Ut. Esperada*
+- A division operation was used to create a new measure in the "Cuotas%" sheet called *Cuota Ingresos*
+- A division operation was used to create a new measure in the "Cuotas%" sheet called *Cuota Gastos* 
+- A division operation was used to create a new measure in the "Cuotas%" sheet called *Cuota Utilidad* 
+- A division operation was used to create a new measure in the "Cuotas%" sheet called *Cuota Saldo* 
+- A new column was created using `CALCULATE`, `FILTER`, `ALL` and `MAX` functions in "Finanzas" sheet 
+- A new column was created using `CALCULATE`, `FILTER`, `ALL` and `MAX` functions in "Expectativa" sheet 
 
 ## Description
 
 For the human resources report different visualizations such as map, card, buttons, donut chart, stacked bar chart, stacked column chart, table, and scatter chart were used to make the exposed analysis. 
 
 The analysis consists of three parts: the first one can be found on the page named "Total colaboradores" and is a summary of the employees, headquarters, and departments that make up the company, along with there average characteristics of salaries, age, and qualifications. Next is the page "Análisis Sueldo" where the focus is on the behavior of salaries among employees, and finally, on the page "Evaluación Desempeño" the approach is based on the qualifications received by the employees and performances of the bosses. 
-
-https://user-images.githubusercontent.com/93662295/142662794-b8b290f2-571a-456f-a8c3-8232da5b06d6.mp4
-
-https://user-images.githubusercontent.com/93662295/142662814-939b17e2-500b-4c56-9192-62cf55985a0a.mp4
-
-https://user-images.githubusercontent.com/93662295/142662959-2726e2a5-7319-4360-8b10-525efa017994.mp4
 
