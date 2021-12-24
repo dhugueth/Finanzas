@@ -66,7 +66,7 @@ It was required to relate common data between the files:
 
 ## Description
 
-For the human resources report different visualizations such as map, card, buttons, donut chart, stacked bar chart, stacked column chart, table, and scatter chart were used to make the exposed analysis. 
+~~For the human resources report different visualizations such as map, card, buttons, donut chart, stacked bar chart, stacked column chart, table, and scatter chart were used to make the exposed analysis.~~
 
-The analysis consists of three parts: the first one can be found on the page named "Total colaboradores" and is a summary of the employees, headquarters, and departments that make up the company, along with there average characteristics of salaries, age, and qualifications. Next is the page "Análisis Sueldo" where the focus is on the behavior of salaries among employees, and finally, on the page "Evaluación Desempeño" the approach is based on the qualifications received by the employees and performances of the bosses. 
+~~The analysis consists of three parts: the first one can be found on the page named "Total colaboradores" and is a summary of the employees, headquarters, and departments that make up the company, along with there average characteristics of salaries, age, and qualifications. Next is the page "Análisis Sueldo" where the focus is on the behavior of salaries among employees, and finally, on the page "Evaluación Desempeño" the approach is based on the qualifications received by the employees and performances of the bosses.~~
 
