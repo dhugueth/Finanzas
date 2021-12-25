@@ -66,7 +66,12 @@ It was required to relate common data between the files:
 
 ## Description
 
-~~For the human resources report different visualizations such as map, card, buttons, donut chart, stacked bar chart, stacked column chart, table, and scatter chart were used to make the exposed analysis.~~
+For the Personal Finance report different visualizations such as gauge, multi-row card, button, slicer, table, area chart, line chart, clustered column chart, matrix, line ad stacked column chart were used to make the exposed analysis. 
 
-~~The analysis consists of three parts: the first one can be found on the page named "Total colaboradores" and is a summary of the employees, headquarters, and departments that make up the company, along with there average characteristics of salaries, age, and qualifications. Next is the page "Análisis Sueldo" where the focus is on the behavior of salaries among employees, and finally, on the page "Evaluación Desempeño" the approach is based on the qualifications received by the employees and performances of the bosses.~~
+The project had the goal of developing an interactive report on personal finances, which allows visualizing the behavior of some indicators of income, expenses, profit, and balance through the months of 2019 and 2020.  
+
+
+https://user-images.githubusercontent.com/93662295/147392819-a66ee86f-9989-4794-8050-e27ff65ef147.mp4
+
+
 
